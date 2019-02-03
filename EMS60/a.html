@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    var obj = {
+        name: 'zs',
+        age: 18,
+        children: [1,2,3]
+    }
+    // // 值传递
+    // function change(data) {
+    //     data = ['a', 'b', 'c']
+    // }
+    // change(obj.children)
+    // console.log(obj.children) // [1,2,3]
+
+    function change(data) {
+        data.children = ['a', 'b', 'c']
+    }
+    // 引用传递
+    change(obj)
+    console.log(obj.children) // ["a", "b", "c"]
+    
+</script>
+</html>
